@@ -8,20 +8,40 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
     <script>
     $(document).ready(function(){
-        ass
-        var numero = $("#tablaMultiplicar").val();
-        alert(numero);
+        var td = "";
+        $("input:button").click(function(){
+            var numero = $("#tablaMultiplicar").val();
+            for (let index = 1; index <= 10; index++) {
+                td = "<tr><td>"+index + " x " +  numero +  " = " + (index*numero) + "</td></tr>";
+                $("#tabla").append(td);  
+            }
+        });     
     });
     
     </script>
+
+    <style>
+        body table tr td {
+            color:rgb(26, 201, 3);
+            align-items: center;
+        }
+        *{
+            margin: auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <!--Solicitar un número y presentar su tabla de multiplicar.-->
+    <h1>Tabla de multiplicar</h1>
     <label>Inserte un número: </label>
     <input type="text" name="tablaMultiplicar" placeholder="Número" id="tablaMultiplicar">
-    <input type="button" value="">
+    <input type="button" value="Calcular">
     <br/>
     <br/>
     <label>Tabla de Multiplicar</label>
-    <span id="multiplicar"></span>
+    <table id="tabla" border="solid 1px black">
+        
+    </table>
 </body>
 </html>
