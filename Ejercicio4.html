@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 4 </title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+    <script>
+        $(document).ready(function(){
+            $("input:button").click(function(){
+                var cadena = $("#cadenaAnalizada").val();
+                var cadena2 = conversionMayusculas(cadena); 
+                var cantidadLM = 0;
+                var cantidadLMinus = 0;
+                for (let index = 0; index < cadena.length; index++) {
+                    if(cadena[index] == cadena2[index]){
+                        cantidadLM++;
+                    }
+                    else{
+                        cantidadLMinus++;
+                    }
+                }
+
+                if(cantidadLM == cadena.length){
+                    $("#resultado").text("Esta compuesta por mayusculas");
+                }else{
+                    if(cantidadLMinus == cadena.length){
+                        $("#resultado").text("Esta compuesta por minusculas");
+                    }
+                    else{
+                        $("#resultado").text("Esta compuesta por ambas");
+                    }
+                }
+            });
+        });
+
+        function conversionMayusculas(string){
+            return string.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+
+    <!--Definir una función que muestre información sobre una cadena de texto que se le
+    pasa como argumento. A partir de la cadena que se le pasa, la función determina si
+    esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una
+    mezcla de ambas.-->
+    <h1>Información sobre una cadena de texto </h1>
+    <label for="cadena">Cadena : </label>
+    </br>
+    <input type="text" name="cadena" id="cadenaAnalizada">
+    <input type="button" value="Analizar">
+    <span id="resultado"></span>
+
+    
+</body>
+</html>

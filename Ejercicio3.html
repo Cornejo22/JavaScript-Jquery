@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,30 @@
     <title>Ejercicio 3 </title>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
     <script>
-        
+        $(document).ready(function(){
+            $("input:button").click(function(){
+                var numero = $("#numeroElegido").val();
+                var computo = numero;
+                var span = numero+"! = ";
+
+                for (let index = numero-1; index > 0; index--) {
+                    computo = computo * index; 
+                }
+
+                for (let index = numero; index >= 1; index--) {
+                    if(index == 1){
+                        span+= " " + index;
+                    }
+                    else{
+                        span+= " " + index + " x ";
+                    }
+                }
+
+                span+= " = " + computo;
+
+                $("#calculado").text(span);
+            });
+        });  
     </script>
 </head>
 <body>
@@ -15,9 +38,14 @@
 multiplicar todos los factores n x (n-1) x (n-2) x ... x 1. Así, el factorial de 5
 (escrito como 5!) es igual a: 5! = 5 x 4 x 3 x 2 x 1 = 120. Utilizando la estructura
 for, crear un script que calcule el factorial de un número entero.-->
+<h1>Factorial de un número </h1>
+<label for="numero">Numero : </label>
+<input type="text" name="numero" id="numeroElegido">
 
+<input type="button" value="Calcular">
+</br>
+</br>
+<span id="calculado"></span>
 
-
-    
 </body>
 </html>

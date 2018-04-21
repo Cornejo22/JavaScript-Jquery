@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 5</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+    <script>
+    
+    $(document).ready(function(){
+        $("input:button").click(function(){
+            var metodoPrompt = prompt("Buenas, ingrese una frase : ");
+            if(metodoPrompt != null){
+                var cadenaTroceada = metodoPrompt.split(' ');
+                var total = "<tr><td>La primera palabra es : " + cadenaTroceada[0] + 
+                " y la última es : " + cadenaTroceada[cadenaTroceada.length-1] + "</td></tr>";
+                $("#resultado").append(total);
+                var palabrasEnOrdenInverso = "<tr><td>" + cadenaTroceada.reverse() + "</td></tr>";
+
+                $("#resultado").append(palabrasEnOrdenInverso);
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+<!--Leer una cadena de texto mediante el método prompt() y generar un array con las palabras que contiene. 
+Posteriormente, mostrar la siguiente información:
+Número de palabras
+Primera palabra y última palabra
+Las palabras colocadas en orden inverso
+Las palabras ordenadas de la a la z
+Las palabras ordenadas de la z a la a-->
+<h1>Leer Cadena Método Prompt()</h1>
+
+<input type="button" id="Pulsa" value="Comenzar"> 
+<br/>
+<br/>
+<table id="resultado" border="solid 1px black"></table>
+    
+</body>
+</html>
