@@ -10,15 +10,43 @@
     
     $(document).ready(function(){
         $("input:button").click(function(){
+            //Método prompt te saltará una cuadrito o caja para ingresar las palabras.
             var metodoPrompt = prompt("Buenas, ingrese una frase : ");
             if(metodoPrompt != null){
+
+                //Expresion regular donde remplazaremos todos aquellos caracteres especiales por un espacio.
+                metodoPrompt = metodoPrompt.replace(/[^a-zA-Z 0-9.]+/g,' ');
+
+                //Trocearemos las cadenas por los espacios.
                 var cadenaTroceada = metodoPrompt.split(' ');
                 var total = "<tr><td>La primera palabra es : " + cadenaTroceada[0] + 
                 " y la última es : " + cadenaTroceada[cadenaTroceada.length-1] + "</td></tr>";
-                $("#resultado").append(total);
-                var palabrasEnOrdenInverso = "<tr><td>" + cadenaTroceada.reverse() + "</td></tr>";
 
-                $("#resultado").append(palabrasEnOrdenInverso);
+                //Añadiremos la primera y ultima palabra
+                $("#resultado").append(total);
+
+                //Recorremos las palabras para invertirlas
+                var total2="";
+                for (let index = 0; index < cadenaTroceada.length; index++) {
+                    var string = cadenaTroceada[index];
+                    var invertida="";
+                    for (let index2 = string.length; index2 > 0; index2--) {
+                        invertida+=string[index2];
+                    }  
+                    console.log(invertida);   
+                }
+                $("#resultado").append("<tr><td>Las palabras en orden inverso : </td></tr><tr><td>"+total+"</td></tr>");
+
+                //Añadiremos las palabras de A-Z
+                var palabrasOrdenadasAZ = "<tr><td sytle='border:solid 5px grey !important;'>La palabras en orden A-Z</td></tr><tr><td>" + 
+                cadenaTroceada.sort() + "</td></tr>";
+                $("#resultado").append(palabrasOrdenadasAZ);
+
+                //Añadiremos las palabras en orden Z-A
+                var palabrasOrdenadasZA = "<tr><td sytle='border:solid 5px grey  !important;'>La palabras en orden Z-A</td></tr><tr><td>" + 
+                cadenaTroceada.reverse() + "</td></tr>";
+                $("#resultado").append(palabrasOrdenadasZA);
+
             }
         });
     });
