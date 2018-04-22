@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 9</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+    <script>
+        $(document).ready(function () {
+
+            $("input:button").click(function () {
+                var palindromos = $("#palindromos").val();
+                var bool = esPalindromo(palindromos);
+                if(bool){
+                    $("#resultado").text("ES PALINDROMO");
+                }
+                else{
+                    $("#resultado").text("NO ES PALÍNDROMO");
+                }
+            });
+
+            function esPalindromo(palindromos) {
+                return palindromos == palindromos.split(' ').reverse().join('');
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <!--Definir una función que determine si la cadena de texto que se le pasa como
+parámetro es un palíndromo, es decir, si se lee de la misma forma desde la
+izquierda y desde la derecha. Ejemplo de palíndromo complejo: "La ruta nos aporto
+otro paso natural".-->
+
+    <h1>¿Palíndromo?</h1>
+    <label for="">Calcular el palíndromo</label>
+    <input type="text" name="palindromos" id="palindromos">
+    <input type="button" value="Calcular">
+    <span id="resultado"></span>
+
+
+</body>
+
+</html>

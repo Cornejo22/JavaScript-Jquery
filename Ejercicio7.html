@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 7</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+    <script>
+        $(document).ready(function(){
+
+           $("input:button").click(function(){
+                var numero = $("#numero").val();
+             
+                if(numero % 2 == 0){
+                    $("#resultado").text("ES PAR");
+                }else{
+                    $("#resultado").text("ES IMPAR");
+                }                
+           });
+        });
+    </script>
+</head>
+<body>
+
+    <!--Escribir el código de una función a la que se pasa como parámetro un número
+entero y devuelve como resultado una cadena de texto que indica si el número es
+par o impar. Mostrar por pantalla el resultado devuelto por la función.-->
+<h1>¿Número par?</h1>
+<label for="">Inserta un número</label>
+<input type="number" name="numero" id="numero" placeholder="Insertar un número">
+<input type="button" value="Analizar">
+<span id="resultado"></span>
+</body>
+</html>
