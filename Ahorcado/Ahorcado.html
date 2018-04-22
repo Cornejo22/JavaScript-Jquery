@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>El Ahorcado</title>
+    <link rel="icon" type="image/jpg" href="imagenes/sogaIcon.jpg" />
+    <script src="diccionario.js"></script>
+    <script>
+        var cadena = diccionario;
+        var numero_palabras = cadena.length;
+        var numero = Math.floor(Math.random() * numero_palabras);
+        var palabraMostrar = cadena[numero].toUpperCase();
+        //alert(palabraMostrar);
+        var letraJugada = "";
+        window.onload = function () {
+            //Poner botones en la capa.
+            var abecedario = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+            for (var i = 0; i < abecedario.length; i++) {
+                var saltolinea = document.createElement('br');
+                if (i % 9 == 0 && i != 0) {
+                    var boton = document.createElement("button");
+                    var texto = document.createTextNode(abecedario[i]);
+                    boton.appendChild(texto);
+                    boton.setAttribute("id", abecedario[i]);
+                    boton.setAttribute("onclick", "pulsar(this)");
+                    var capa = document.getElementById("capa");
+                    capa.appendChild(boton);
+                    capa.appendChild(saltolinea);
+                }
+                else {
+                    var boton = document.createElement("button");
+                    var texto = document.createTextNode(abecedario[i]);
+                    boton.appendChild(texto);
+                    boton.setAttribute("id", abecedario[i]);
+                    boton.setAttribute("onclick", "pulsar(this)");
+                    var capa = document.getElementById("capa");
+                    capa.appendChild(boton);
+                }
+            }
+        }
+
+
+        function pulsar(boton) {
+            //Letra pulsada
+            letraJugada = boton.id;
+            //Palabra usada
+            var mayuscula = palabraMostrar.toUpperCase();
+            //Indica se se encontró la letra
+            var flag = false;
+            var cadena = descubrir.innerHTML;
+            //PalabraTemporal
+            var temporalP = "";
+            for (var contadorP = 0; contadorP < cadena.length; contadorP++) {
+                //alert(mayuscula[contadorP]);
+                if (mayuscula[contadorP] == letraJugada) {
+                    temporalP += letraJugada + ""
+                    flag = true;
+                }
+                else {
+                    temporalP += cadena[contadorP] + "";
+                }
+            }
+            if (flag) {
+                boton.disabled = "disabled";
+                var audio = document.getElementById("audio");
+                audio.play();
+                boton.style.color = "blue";
+            }
+            else {
+                boton.style.color = "red";
+                boton.disabled = "disabled";
+                restar();
+                var audio2 = document.getElementById("audio2");
+                audio2.play();
+            }
+
+            descubrir.innerHTML = temporalP;
+
+            if (palabraComp()) {
+                var bts = document.getElementsByTagName("button");
+                for (var index = 0; index < bts.length; index++) {
+                    bts[index].disabled = true;
+                }
+                //Se desahabilitará si el jugador gana pero antes 
+                //se comprobará que haya acertado
+                document.getElementById("juego").innerHTML = "Has ganado";
+                document.getElementById("reinicio").disabled = false;
+                document.getElementById('mostrar').innerHTML= "<img src='imagenes/ganaste.gif' alt='ganar' />";
+            }
+
+
+        }
+
+        function restar() {
+            contador = document.getElementById("corazones").innerText;
+
+            contador--;
+            
+            if (contador == 0) {
+                //Desahabilitará todos los botones si el jugador pierde
+                var bts = document.getElementsByTagName("button");
+                for (var index = 0; index < bts.length; index++) {
+                    bts[index].disabled = true;
+                }
+                document.getElementById("juego").innerHTML = "Has perdido";
+                document.getElementById("reinicio").disabled = false;
+                document.getElementById('mostrar').innerHTML = palabraMostrar;
+            }
+        
+            document.getElementById('corazones').innerHTML = contador;
+
+        }
+
+        function palabraComp() {
+            //Comprueba que se completó la palabra : 
+            var fin = false;
+            //Obtén la cadena actual
+            var cadena = document.getElementById("descubrirLetra").innerHTML;
+
+            if (cadena == palabraMostrar) {
+                fin = true;
+            }
+            return fin;
+        }
+
+        function Reinicio() {
+            location.reload(true);
+        }
+
+    </script>
+    <style>
+        body {
+            text-align: center;
+            font-size: 30px;
+            background-image: url("imagenes/fondo.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            padding-bottom: 10px;
+            color:#FFFFFF;
+        }
+        #capa{
+            padding-top: 20px;
+        }
+
+        #capa2 {
+            text-align: center;
+        }
+
+        #capa button{
+            font-size: x-large;;
+        }
+
+        #contenedor{
+            padding-bottom: 35px;
+        }
+
+        #corazones{
+            display: inline;
+        }
+
+        #mostrar{
+            color:gold;
+        }
+
+        #juego {
+            color:#7401DF;
+            font-size: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>El Ahorcado</h1>
+    <div id="contenedor"><img id="corazon" src="imagenes/Corazon.png" alt="vidas" height="45px" width="45px"><div id="corazones" style="color:gold;">5</div></div>
+    <div id="capa2">
+        <div id="descubrirLetra" style="letter-spacing: 2px; color:white;"></div>
+    </div>
+    <br/>
+    <script>
+        //Me crea la palabra con el carácter "_"
+        var descubrir = document.getElementById('descubrirLetra');
+        for (var i = 0; i < palabraMostrar.length; i++) {
+            descubrir.innerHTML = descubrir.innerHTML + '_';
+        }
+    </script>
+    <span id="mostrar"></span>
+    <div id="capa"></div>
+    <br/>
+    <button id="reinicio" onclick="Reinicio()" disabled="disabled">Reiniciar</button>
+    <br/>
+    <br/>
+    <span id="juego"></span>
+    <br/>
+    <br/>
+    <audio id="audio" src="sonidos/correctoS.mp3"></audio>
+    <audio id="audio2" src="sonidos/incorrectoS.mp3"></audio>
+    <span id="ganador"></span>
+</body>
+
+</html>
