@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 12</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+    <script>
+        $(document).ready(function(){
+            $("input:button").click(function(){
+                var radio = $("#radio").val();
+                var pi = Math.PI;
+                var resultado = pi * (Math.pow(radio,2));
+                $("#resultado").text(Number(resultado).toFixed(2));
+            });
+        });
+    
+    </script>
+</head>
+<body>
+
+    <!--Objeto Math.- Calcular el área de un círculo tras solicitar el radio desde un cuadro de diálogo.-->
+    <h1>Área de un circulo</h1>
+    <input type="text" name="radio" id="radio">
+    <input type="button" value="Calcular Area">
+    <span id="resultado"></span>
+    
+</body>
+</html>

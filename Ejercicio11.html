@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 11</title>
+    <script>
+        //Crearemos un objeto fecha para conseguir el año en el que estamos
+        var fullDate = new Date();
+        var anno = fullDate.getFullYear();
+        //Conseguir el dia, mes y año en el que estamos
+        var dia = fullDate.getDate();
+        var mes = fullDate.getMonth() + 1;
+
+        var fechaini = new Date(mes + "/" + dia + "/" + anno);
+        var fechaFin = new Date("12/31/"+anno)
+        var diasdif= fechaFin.getTime()-fechaini.getTime();
+        document.write(diasdif);
+        
+
+    </script>
+
+</head>
+
+<body>
+
+    <!--Objeto Date.- Calcular el tiempo restante en milisegundos entre la fecha actual y las 12 de la
+noche del 31 de Diciembre del mismo año.-->
+
+</body>
+
+</html>
