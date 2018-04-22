@@ -9,23 +9,24 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
     <script>
         $(document).ready(function () {
-
             $("input:button").click(function () {
                 var palindromos = $("#palindromos").val();
-                var bool = esPalindromo(palindromos);
-                if(bool){
+                if (palindromos.split(' ').join('') == Al_Reves(palindromos).split(' ').join('')) {
                     $("#resultado").text("ES PALINDROMO");
                 }
-                else{
+                else {
                     $("#resultado").text("NO ES PALÍNDROMO");
                 }
             });
-
-            function esPalindromo(palindromos) {
-                return palindromos == palindromos.split(' ').reverse().join('');
-            }
-
         });
+
+        function Al_Reves(palabra) {
+            var reves = "";
+            for (var i = palabra.length; 0 < i; i--) {
+                reves += palabra[i - 1];
+            };
+            return reves;
+        }
     </script>
 </head>
 
