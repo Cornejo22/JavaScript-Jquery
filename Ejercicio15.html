@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercico 15</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+    <script>
+        var array = [];
+        $(document).ready(function () {
+
+            $("input:button").click(function () {
+                var iD = this.id;
+                var numeroAleatorio = Math.floor(Math.random() * 1000 + 1);
+                console.log(numeroAleatorio);
+                switch (iD) {
+                    case "InsertarP": {
+                        array.unshift(numeroAleatorio);
+                        console.log(array);
+                        $("#resultado").text(array);
+                    }
+                        break;
+                    case "InsertarF": {
+                        array.push(numeroAleatorio);
+                        console.log(array);
+                        $("#resultado").text(array);
+                    }
+                        break;
+                    case "BorrarP": {
+                        array.shift();
+                        console.log(array);
+                        $("#resultado").text(array);
+                    }
+                        break;
+                    case "BorrarP": {
+                        array.shift();
+                        console.log(array);
+                        $("#resultado").text(array);
+                    }
+                        break;
+                    case "OrdenarA": {
+                        array.sort(function (a, b) {
+                            return a - b;
+                        })
+                        console.log(array);
+                        $("#resultado").text(array);
+                    }
+                        break;
+                    case "OrdenarD": {
+                        array.sort(function (a, b) {
+                            return b - a;
+                        })
+                        console.log(array);
+                        $("#resultado").text(array);
+                    }
+                        break;
+                }
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <!--Objeto Array.- Crear una página que presente los elementos de un array numérico (inicialmente
+vacío) y botones con las opciones siguientes:
+- Insertar valor al final del array.
+- Insertar al principio del array.
+- Borrar primer elemento.
+- Borrar último elemento.
+- Ordenar ascendentemente.
+- Ordenar descendentemente.
+Los datos a insertar en el array serán elementos aleatorios (random) de entre 1 y 1000.-->
+
+    <h1>Objeto Array</h1>
+    <input type="button" value="Insertar al principio" id="InsertarP">
+    <input type="button" value="Insertar al final" id="InsertarF">
+    <input type="button" value="Borrar el primer elemento" id="BorrarP">
+    <input type="button" value="Borrar el último elemento" id="BorrarF">
+    <input type="button" value="Ordenar ascendentemente" id="OrdenarA">
+    <input type="button" value="Ordenar descendentemente" id="OrdenarD">
+    </br></br>
+    <span id="resultado"></span>
+
+</body>
+
+</html>

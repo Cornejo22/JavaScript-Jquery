@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 14</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js'></script>
+    <script>
+        
+        $(document).ready(function(){
+            
+            $("input:button").click(function(){
+                var cadenaT = $("#cadenaT").val();
+                var cantidadCaracteres = cadenaT.length;
+                var cursiva = cadenaT.italics();
+                var tachado = cadenaT.strike();
+                $("#resultado").append("</br></br>La cantidad de caracteres es : " + cantidadCaracteres 
+                + "</br></br> La frase en cursiva es : " + cursiva 
+                + "</br></br> La frase tachada es : " + tachado);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    
+<!--Objeto String.- Solicitar una cadena de texto desde teclado, presentar el número de caracteres
+que contiene y presentar la propia cadena en cursiva y en tachado.-->
+<h1>Objeto String</h1>
+<label for="">Ingrese la cadena de texto</label>
+<input type="text" name="cadenaT" id="cadenaT" placeholder="Texto...">
+<input type="button" value="Analizar">
+<span id="resultado"></span>
+
+</body>
+</html>
