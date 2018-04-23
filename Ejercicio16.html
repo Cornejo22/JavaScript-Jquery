@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 16</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#resultado").text();
+            $("input:button").click(function () {
+                var numero = $("#numero").val();
+                console.log(numero);
+                if (numero < 0) {
+                    $("#resultado").text("Es un número menor que 0").css("color", "red");
+                }
+                else {
+                    var booleana = esPrimo(numero);
+                    if (booleana) {
+                        $("#resultado").text("Es un número primo").css("color","green");
+                    }
+                    else {
+                        $("#resultado").text("No es un número primo").css("color","black");
+                    }
+                }
+            });
+        });
+
+        function esPrimo(numero) {
+            var booleana = false;
+            var cantidad = 0;
+
+            for (let index = 0; index <= numero; index++) {
+
+                if (numero % index == 0) {
+                    cantidad++;
+                }
+
+            }
+
+            if (cantidad == 2) {
+                booleana = true;
+            }
+
+            return booleana;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <!--Función booleana que recibe un número entero positivo y determina si es primo.-->
+    <h1>¿Es Primo?</h1>
+    <input type="number" name="numero" id="numero" min="0">
+    <input type="button" value="Calcular">
+    <span id="resultado"></span>
+
+</body>
+
+</html>

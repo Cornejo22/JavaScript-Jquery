@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 17</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script>
+
+        $(document).ready(function () {
+            $("input:button").click(function () {
+                var numero1 = $("#numero").val();
+                var numero2 = $("#numero2").val();
+                var resultado = resta(numero1, numero2);
+                $("#resultado").text(resultado);
+            });
+        });
+
+        function resta(numero1, numero2) {
+            return resultado = numero1 - numero2;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <!--Función numérica que recibe dos números enteros y devuelve la resta del mayor menos el
+menor.-->
+
+    <h1>Restar dos números</h1>
+    <input type="number" name="numero" id="numero"> -
+    <input type="number" name="numero2" id="numero2">
+    <input type="button" value="Calcular">
+    </br></br>
+    <span id="resultado"></span>
+
+</body>
+
+</html>
