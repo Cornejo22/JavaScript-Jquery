@@ -1,0 +1,99 @@
+
+body{
+    background-image: url("img/fondoMovimiento.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+#titulo{
+    display: inline-block;
+}
+#titulo img{
+    width: 200px;
+}
+
+tr td img{
+    width: 135px;
+    overflow: hidden;
+}
+
+.flip {
+    height: 135px;
+    width: 135px;
+    margin: 0 auto;
+}
+
+.flip img {
+    width: 135px;
+    height: 135px;
+    cursor: pointer;
+}
+
+.front img{
+    filter: grayscale(100%);
+}
+
+.flip .back {
+    color: #fff;
+    text-align: center;
+}
+
+button,input[type=button]{
+    background:#3d85c6;
+    background:-webkit-linear-gradient(#3d85c6, #073763);
+    background:linear-gradient(#3d85c6, #073763);
+    border-radius:5px;
+    height:50px;
+    color:#ffffff;
+    display:inline-block;
+    font:sega;
+    text-align:center;
+    text-shadow:none;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+}
+
+button:disabled,input[type=button]:disabled{
+    background: #073763;
+}
+
+.juego{
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+    color:white;
+    font-weight: bold;
+}
+label{
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+    color:white; 
+    font-weight: bold;
+}
+
+#number{
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    bottom: 25px;
+    left: 80px;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 430px){
+    #number{
+        font-size: 20px;
+        display: inline-block;
+        position: relative;
+        bottom: 45px;
+        left: 240px;
+        color: white;
+        font-weight: bold;
+    }
+}

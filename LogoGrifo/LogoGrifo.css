@@ -1,0 +1,182 @@
+@font-face {
+    font-family: "Mickey";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), url("fonts/MICKEY.woff") format("woff"), url("fonts/MICKEY.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "angrybirds";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), url("fonts/angrybirds.woff") format("woff"), url("fonts/angrybirds.ttf") format("truetype");
+}
+
+body{
+    background-image: url(https://bennettfeely.com/gradients/img/gradient_8.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    text-shadow: 0 0 20px #8CFF95, 2px -2px 3px #3DFF67, -4px -4px 5px #3DFFDB, 5px -10px 6px #25CBD0, -5px -12px 8px #1AAEB3, 0 -15px 20px #137F93, 2px -15px 20px #0A5664;
+    color: #666;
+    letter-spacing: 1px;
+    font-family: Mickey;
+}
+
+tr{
+    font-family: angrybirds;
+    font-size: 18px;
+}
+
+
+tr td{
+    display: grid;
+    float: left;
+    text-align: center;
+}
+
+#definicion{
+    display: inline-flex;
+    width: 48vw;
+    text-align: left;
+}
+
+input{
+    width: 68px;
+    margin: 8px;
+    text-align: center;
+    background-color: initial;
+    color:black;
+    border-color: cyan;
+    border-radius: 20px;
+    font-family:angrybirds;
+    font-size: 18px;
+    color:brown;
+}
+
+button{
+    text-align: center;
+    margin:20px;
+    
+    background: #ff00d0;
+    background-image: -webkit-linear-gradient(top, #ff00d0, #240d94);
+    background-image: -moz-linear-gradient(top, #ff00d0, #240d94);
+    background-image: -ms-linear-gradient(top, #ff00d0, #240d94);
+    background-image: -o-linear-gradient(top, #ff00d0, #240d94);
+    background-image: linear-gradient(to bottom, #ff00d0, #240d94);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    text-shadow: 1px 1px 3px #ffffff;
+    -webkit-box-shadow: 0px 1px 3px #000f12;
+    -moz-box-shadow: 0px 1px 3px #000f12;
+    box-shadow: 0px 1px 3px #000f12;
+    font-family: Courier New;
+    color:#f7ff00;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border: solid #ffffff 2px;
+    text-decoration: none;
+    float: right;
+    position: relative;
+    bottom: 115px;
+}
+
+button:hover {
+    background: #158bd4;
+    text-decoration: none;
+}
+
+button:focus,input:focus{
+    outline: none;
+}
+
+button:disabled{
+    color:yellow;
+    background-color: grey;
+    background-image: -webkit-linear-gradient(top,grey, grey);
+    background-image: -moz-linear-gradient(top, grey, grey);
+    background-image: -ms-linear-gradient(top, grey, grey);
+    background-image: -o-linear-gradient(top, grey, grey);
+    background-image: linear-gradient(to bottom, grey, grey);
+}
+
+@-webkit-keyframes swing
+{
+15%
+{
+-webkit-transform: translateX(5px);
+transform: translateX(5px);
+}
+30%
+{
+-webkit-transform: translateX(-5px);
+transform: translateX(-5px);
+}
+50%
+{
+-webkit-transform: translateX(3px);
+transform: translateX(3px);
+}
+65%
+{
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+80%
+{
+-webkit-transform: translateX(2px);
+transform: translateX(2px);
+}
+100%
+{
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}
+}
+@keyframes swing
+{
+15%
+{
+-webkit-transform: translateX(5px);
+transform: translateX(5px);
+}
+30%
+{
+-webkit-transform: translateX(-5px);
+transform: translateX(-5px);
+}
+50%
+{
+-webkit-transform: translateX(3px);
+transform: translateX(3px);
+}
+65%
+{
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+80%
+{
+-webkit-transform: translateX(2px);
+transform: translateX(2px);
+}
+100%
+{
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}
+}
+
+h1:hover,button:hover,td:hover
+{
+-webkit-animation: swing 1s ease;
+animation: swing 1s ease;
+-webkit-animation-iteration-count: 1;
+animation-iteration-count: 1;
+}

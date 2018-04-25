@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memorama</title>
+    <link rel="stylesheet" href="juegoMemoria.css">
+    <link rel="shortcut icon" href="img/id00.png" type="image/png">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jQuery-Flip/1.1.2/jquery.flip.min.js'></script>
+    <script src="juegoMemoria.js"></script>
+</head>
+
+<body>
+    <audio src="img/sonicRing.mp3" id="ring"></audio>
+    <audio src="img/sonicDead.mp3" id="dead"></audio>
+    <div id="titulo">
+        <img src="img/sonicTitulo.png" alt="">
+    </div>
+    <div id="number"></div>
+
+    <table style="margin: 0 auto;">
+        <tr>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="0" alt="" />
+                    </div>
+            </td>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="1" alt="" />
+                    </div>
+            </td>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="2" alt="" />
+                    </div>
+            </td>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="3" alt="" />
+                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="4" alt="" />
+                    </div>
+            </td>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="5" alt="" />
+                    </div>
+            </td>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="6" alt="" />
+                    </div>
+            </td>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="7" alt="" />
+                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="8" alt="" />
+                    </div>
+            </td>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="9" alt="" />
+                    </div>
+            </td>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="10" alt="" />
+                    </div>
+            </td>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="11" alt="" />
+                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="12" alt="" />
+                    </div>
+            </td>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="13" alt="" />
+                    </div>
+            </td>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="14" alt="" />
+                    </div>
+            </td>
+            <td>
+                <div class="flip noflip" onclick="GirarCarta(this)">
+                    <div class="front">
+                        <img src="img/id0.png" alt="" />
+                    </div>
+                    <div class="back">
+                        <img src="" class="backen" id="15" alt="" />
+                    </div>
+            </td>
+        </tr>
+    </table>
+
+    <button disabled="disabled">Reiniciar Juego</button>
+    <span class="juego"></span>
+    </br>
+    </br>
+    <div>
+        <input type="button" value="Iniciar Juego" id="iniciarJuego">
+        <label>Fácil</label>
+        <input type="radio" name="dificultad" id="facil">
+        <label>Medio</label>
+        <input type="radio" name="dificultad" id="medio">
+        <label>Díficil</label>
+        <input type="radio" name="dificultad" id="dificil">
+    </div>
+
+
+</body>
+
+</html>

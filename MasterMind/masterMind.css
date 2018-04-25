@@ -1,0 +1,278 @@
+@font-face {
+    font-family: "dimitri";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), url("fonts/dimitri.woff") format("woff"), url("fonts/dimitri.ttf") format("truetype");
+}
+
+/*Cabecera*/
+header{
+    background-color:  #00000070;
+}
+
+header div{
+    display: inline-block;
+    font-weight: bold;
+}
+.explicacion{
+    width: 85%;
+    position: relative;
+    top: 13px;
+}
+/*Cuerpo*/
+body{
+    background-image: url("img/retroGame.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #00FF80;
+}
+/*Izquierda*/
+.izquierda{
+    float: left;
+    width: 50%;
+    margin: 5% auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+.izquierda ol{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.izquierda #listaComprobaciones li div{
+    margin-right: 5px;
+    display: inline-block;
+}
+
+/*Derecha*/
+.derecha{
+    float: right;
+    width:50%;
+    margin: 5% auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+table{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.derecha input[type=text]{
+    width: 20px;
+    height: 20px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    font-family: dimitri;
+    font-size: 20px;
+    outline: none;
+}
+
+.derecha input[type=button]{
+    background: #73c7ff;
+        background-image: -webkit-linear-gradient(top, #73c7ff, #002afa);
+        background-image: -moz-linear-gradient(top, #73c7ff, #002afa);
+        background-image: -ms-linear-gradient(top, #73c7ff, #002afa);
+        background-image: -o-linear-gradient(top, #73c7ff, #002afa);
+        background-image: linear-gradient(to bottom, #73c7ff, #002afa);
+        -webkit-border-radius: 27;
+        -moz-border-radius: 27;
+        border-radius: 27px;
+        text-shadow: 1px 1px 3px #ffffff;
+        -webkit-box-shadow: 0px 1px 3px #000000;
+        -moz-box-shadow: 0px 1px 3px #000000;
+        box-shadow: 0px 1px 3px #000000;
+        font-family: Georgia;
+        color: #000000;
+        font-size: 20px;
+        padding: 10px 20px 10px 20px;
+        border: solid #ffffff 2px;
+        text-decoration: none;
+        padding: 10px;
+        margin: 10px;
+        font-family: dimitri;
+        text-shadow: 2px 2px white;
+}
+.derecha input[type=button]:hover{
+    background: #0073ff;
+    text-decoration: none;
+}
+.derecha input[type=button]:focus{
+    outline: none;
+}
+.derecha input[type=button]:disabled{
+    color:black;
+    background-color: grey;
+    background-image: -webkit-linear-gradient(top,grey, grey);
+    background-image: -moz-linear-gradient(top, grey, grey);
+    background-image: -ms-linear-gradient(top, grey, grey);
+    background-image: -o-linear-gradient(top, grey, grey);
+    background-image: linear-gradient(to bottom, grey, grey);
+}
+
+tbody{
+    display: grid;
+    justify-items: center;
+    padding-bottom: 20px;
+    color:black;
+}
+
+.todo{
+    display: grid;
+}
+
+#solucion li{
+    list-style-type: none;
+    display: inline-flex;
+    position: relative;
+    top: 20%;
+}
+
+#nIntentos,#aciertos,#heridos,#solucion,#resultado{
+    margin-top:2%;
+}
+
+.trB > td{
+    color:black;
+}
+
+/*Colores*/
+.yellow{
+    width: 25px;
+    height: 25px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: yellow;
+    font-weight: bold;
+}
+
+.green{
+    width: 25px;
+    height: 25px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: green;
+    font-weight: bold;
+}
+
+.grey{
+    width: 25px;
+    height: 25px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: grey;
+    font-weight: bold;
+}
+
+.white{
+    width: 25px;
+    height: 25px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: white;
+    font-weight: bold;
+}
+
+.red{
+    width: 25px;
+    height: 25px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: red;
+    font-weight: bold;
+}
+
+.pink{
+    width: 25px;
+    height: 25px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: pink;
+    font-weight: bold;
+}
+
+.blue{
+    width: 25px;
+    height: 25px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: blue;
+    color:white !important;
+    font-weight: bold;
+}
+
+.purple{
+    width: 25px;
+    height: 25px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: purple;
+    font-weight: bold;
+}
+
+.brown{
+    width: 25px;
+    height: 25px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: brown;
+    font-weight: bold;
+}
+.cyan{
+    width: 25px;
+    height: 25px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: cyan;
+    font-weight: bold;
+}
+@media (max-width: 699px){
+    .derecha{
+        float: right;
+        margin: auto;
+        margin-top: 2%;
+        width:100% !important;
+    }
+    .izquierda{
+        float: left;
+        margin: auto;
+        margin-top: 2%;
+        width:100% !important;;
+    }
+    div span#intentos,div span#aciertos,div span#heridos{
+        text-align: center;
+        margin: auto;
+        width: 100% !important;
+    }
+    header{
+        text-align: center;
+    }
+}
+
+@media (max-width: 1190px){
+    .explicacion{
+        position: initial;
+    }
+}
