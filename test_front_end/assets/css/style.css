@@ -1,0 +1,132 @@
+
+h1,h2,h3,h4,h5,h6
+{
+    font-weight: bold;
+}
+
+.divhs>h3{
+    margin-left: 16px !important;
+    margin-bottom: 30px !important;
+    border-left: solid !important;
+    border-color: orange !important;
+}
+
+/*header*/
+header div.redes>ul li
+{
+    display: inline-flex !important;
+    padding-top: 10px;
+
+}
+header div.redes>ul {
+    float: right;
+}
+
+
+header div.redes>ul li > div
+{
+    color:white;
+    margin-right: 5px;
+    margin-left: 3px;
+    margin-top: 3px;
+} 
+
+img.especial{
+    position:absolute !important;
+    left:20px !important;
+    z-index:1 !important;
+}
+@media screen and (max-width: 845px) {
+    img.especial {
+        display: none;
+    }
+}
+
+
+/*Nav*/
+
+
+/*Slider and Carrousel*/
+@media screen and (max-width: 570px) {
+    .demo {
+        display: none;
+    }
+}
+
+/*Body*/
+
+.p{
+    bottom: 30px !important;
+    left: 5px !important;
+    position: relative !important;
+    color: white !important;
+    font-size: 15px;
+    float: left !important;
+    background-color: black !important;
+}
+
+.figure-caption{
+    float: left;
+}
+
+.figImg{
+    border-bottom: solid;
+    border-color: orange;
+}
+
+.videos
+{
+    
+   
+}
+
+.color
+{
+   background-color: red;
+}
+
+.imgs
+{
+    width:100%;
+    height: 100%;
+    background-color: white;
+}
+
+section
+{
+    margin-top:30px !important;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/*Footer*/
+
+footer
+{
+    background-color: rgb(53, 52, 52) !important;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+
+footer div>ul
+{
+    padding-left: 0px !important;
+}
+footer div>ul li
+{
+    list-style-type: none;
+   
+}
+
+footer div.redes>ul li
+{
+    display: inline-flex !important;
+}
+
+@media screen and (max-width: 578px) {
+   footer
+   {
+       text-align: center !important;
+   }
+}
