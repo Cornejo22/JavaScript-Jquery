@@ -1,0 +1,163 @@
+.contenedor{
+    text-align: center;
+}
+
+table,td {
+    border: 1px solid black;
+}
+
+table {
+    width: 400px;
+    height:400px;
+    margin: 0 auto;
+    background-color: beige;
+    margin-top:5em;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*img Equis*/
+.equisPNG, .circuloPNG{
+    margin: 0 auto;
+}
+
+#ganador{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    font-size:2em;
+}
+.boton{
+    text-align: center !important;
+}
+
+button{
+    margin-top:3em;
+    padding-top:3px;
+    font-weight: bold;
+    font-size: 1.5em;
+    -moz-box-shadow:inset 0px 0px 15px 3px #23395e;
+	-webkit-box-shadow:inset 0px 0px 15px 3px #23395e;
+	box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2e466e), color-stop(1, #415989));
+	background:-moz-linear-gradient(top, #2e466e 5%, #415989 100%);
+	background:-webkit-linear-gradient(top, #2e466e 5%, #415989 100%);
+	background:-o-linear-gradient(top, #2e466e 5%, #415989 100%);
+	background:-ms-linear-gradient(top, #2e466e 5%, #415989 100%);
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e466e', endColorstr='#415989',GradientType=0);
+	background-color:#2e466e;
+	-moz-border-radius:17px;
+	-webkit-border-radius:17px;
+	border-radius:17px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #263666;
+    
+}
+
+button:hover{
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #415989), color-stop(1, #2e466e));
+	background:-moz-linear-gradient(top, #415989 5%, #2e466e 100%);
+	background:-webkit-linear-gradient(top, #415989 5%, #2e466e 100%);
+	background:-o-linear-gradient(top, #415989 5%, #2e466e 100%);
+	background:-ms-linear-gradient(top, #415989 5%, #2e466e 100%);
+	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#415989', endColorstr='#2e466e',GradientType=0);
+	background-color:#415989;
+}
+
+button:active{
+    position:relative;
+	top:1px;
+}
+
+button:focus{
+    outline: 0;
+}
+
+footer{
+    margin-top:6em;
+    text-align: center;
+}
+
+.bubbles {
+    display: inline-block;
+    font-family: arial;
+    position: relative;
+}
+    
+.bubbles h1 {
+    position: relative;
+    margin: 1em 0 0;
+    font-family: 'Luckiest Guy', cursive;
+    color: #fff;
+    z-index: 2;
+}
+
+/*  Adaptar la imagen a la etiqueta en la que se aplique estos estilos
+
+    background-image: url(../img/fondoTresEnRaya.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+*/
+
+footer>div{
+    font: 100 1em/1.5 "Neuton";
+    display: inline-block;
+    border-radius: 55px;
+}
+  
+  p {
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    display: inline-block;
+    border: 4px double rgba(255, 255, 255, 0.25);
+    border-width: 4px 0;
+    padding: 1.5em 0em;
+    width: 40em;    
+  }
+  p span {
+    font: 700 4em/1 "Oswald", sans-serif;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+    /* Clip Background Image */
+    background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Animate Background Image */
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+    /* Activate hardware acceleration for smoother animations */
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+  }
+  
+  /* Animate Background Image */
+  @-webkit-keyframes aitf {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
